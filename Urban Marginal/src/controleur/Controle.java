@@ -13,12 +13,12 @@ public class Controle {
 		
 		public Controle(){ //Constructeur
 			this.frmEntreeJeu = new EntreeJeu(this);
-			frmEntreeJeu = new EntreeJeu(); //Cree la frame
+			frmEntreeJeu = new EntreeJeu(null); //Cree la frame
 			frmEntreeJeu.setVisible(true); //Rend visible la frame
 		}
 		
 	/* ------------ Evenements provenant de la vue ------------ */
-	public void evenementVue(JFrame uneFrame, Object info) {
+	public void evenementVue(Object uneFrame, Object info) {
 		if (uneFrame instanceof EntreeJeu) {
 			evenementEntreeJeu(info);
 		}
@@ -26,7 +26,7 @@ public class Controle {
 	}
 
 	private void evenementEntreeJeu(Object info) {
-		
+		System.out.println((String)info);
 	}
 				
 	

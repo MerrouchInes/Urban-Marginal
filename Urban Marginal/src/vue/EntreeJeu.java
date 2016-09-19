@@ -45,12 +45,9 @@ public class EntreeJeu extends JFrame {
 			}
 			
 			private void btnStart_clic(){
-				evenementVue(controle);
+				controle.evenementVue(this, "serveur");
 			}
-
-			private void evenementVue {
-				
-			}
+			
 		});
 		btnStart.setBounds(323, 39, 89, 23);
 		contentPane.add(btnStart);
@@ -68,7 +65,7 @@ public class EntreeJeu extends JFrame {
 				btnConnect_clic();
 			}
 			private void btnConnect_clic() {
-				System.out.println("connecte !");
+				controle.evenementVue(this,  txtIp.getText());
 			}
 		});
 		
